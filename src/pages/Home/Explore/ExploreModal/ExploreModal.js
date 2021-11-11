@@ -17,10 +17,8 @@ const style = {
   p: 4,
 };
 
-const ExploreModal = () => {
-    const [openExplore, setOpen] = React.useState(false);
-    const handleExploreOpen = () => setOpen(true);
-    const handleExploreClose = () => setOpen(false);
+const ExploreModal = ({openExplore, handleExploreClose, explore}) => {
+    const {name, price} = explore;
     return (
         <Modal
         aria-labelledby="transition-modal-title"
@@ -36,10 +34,10 @@ const ExploreModal = () => {
         <Fade in={openExplore}>
           <Box sx={style}>
             <Typography id="transition-modal-title" variant="h6" component="h2">
-              Text in a modal
+              {name}
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+              {price}
             </Typography>
           </Box>
         </Fade>
