@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "name": "Canon EOS R6 ",
+      "price": "$50",
+      "img": "https://i.gadgets360cdn.com/products/small/canon-eos-r6-240x180-1594366613.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Canon EOS R5 ",
+      "price": "$60",
+      "img": "https://i.gadgets360cdn.com/products/small/canon-eos-r5-240x180-1594365791.jpg"
+    },
+    {
+      "id": 3,
+      "name": "EOS 90D",
+      "price": "$70",
+      "img": "https://in.canon/media/image/2019/08/27/12b2d7431a5d4f51bd3184bb8d332bda_19_EOS+90D_BK_FrontSlantDown_18-55ISSTM.png"
+    },
+    {
+      "id": 4,
+      "name": "EOS 850D",
+      "price": "$80",
+      "img": "https://in.canon/media/image/2020/02/11/fff676b601864fd5bdfff7d8ff8fb658_EOS+850D+w+Kit+Lens+Front+Slant.png"
+    },
+    {
+      "id": 5,
+      "name": "EOS 6D Mark II",
+      "price": "$85",
+      "img": "https://in.canon/media/migration/shared/live/products/EN/eos6d-mkii-ef-24-105mm-l.png"
+    },
+    {
+      "id": 6,
+      "name": "EOS 5D Mark IV",
+      "price": "$90",
+      "img": "https://in.canon/media/migration/shared/live/products/EN/eos-5d-mk-iv-ef24-105mm-b1.png"
+    },
+    {
+      "id": 7,
+      "name": "EOS 5D Mark 7",
+      "price": "$90",
+      "img": "https://in.canon/media/migration/shared/live/products/EN/eos-5d-mk-iv-ef24-105mm-b1.png"
+    },
+    {
+      "id": 8,
+      "name": "EOS 5D Mark 8",
+      "price": "$90",
+      "img": "https://in.canon/media/migration/shared/live/products/EN/eos-5d-mk-iv-ef24-105mm-b1.png"
+    },
+    {
+      "id": 9,
+      "name": "EOS 5D Mark 9",
+      "price": "$90",
+      "img": "https://in.canon/media/migration/shared/live/products/EN/eos-5d-mk-iv-ef24-105mm-b1.png"
+    },
+    {
+      "id": 10,
+      "name": "EOS 5D Mark 10",
+      "price": "$90",
+      "img": "https://in.canon/media/migration/shared/live/products/EN/eos-5d-mk-iv-ef24-105mm-b1.png"
+    },
+    {
+      "id": 11,
+      "name": "EOS 5D Mark 11",
+      "price": "$90",
+      "img": "https://in.canon/media/migration/shared/live/products/EN/eos-5d-mk-iv-ef24-105mm-b1.png"
+    },
+    {
+      "id": 12,
+      "name": "EOS 5D Mark 12",
+      "price": "$90",
+      "img": "https://in.canon/media/migration/shared/live/products/EN/eos-5d-mk-iv-ef24-105mm-b1.png"
+    }
+  ]

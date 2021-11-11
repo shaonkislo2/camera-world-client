@@ -1,0 +1,18 @@
+.explore{
+    background-color: rgb(74, 117, 197);
+    border-radius: 20px;
+    
+}
+
+.btn-style{
+    background-color: rgb(12, 33, 71);
+    padding: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: gray;
+    border-radius: 6px;
+    color: white;
+}
+.btn-style:hover{
+    background-color: rgb(9, 126, 126);
+}
