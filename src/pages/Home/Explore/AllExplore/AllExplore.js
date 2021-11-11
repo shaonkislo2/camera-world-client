@@ -6,7 +6,7 @@ const AllExplore = () => {
     const [allExplore, setAllExplore] = useState([]);
 
     useEffect(() =>{
-        fetch('explore.json')
+        fetch('https://aqueous-peak-41185.herokuapp.com/explore')
         .then(res => res.json())
         .then(data => setAllExplore(data))
     },[])
