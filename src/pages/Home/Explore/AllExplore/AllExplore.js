@@ -1,6 +1,9 @@
+import { Container, Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Explore from '../Explore/Explore';
-import './AllExplore.css'
+import Typography from '@mui/material/Typography';
+
+
 
 const AllExplore = () => {
     const [allExplore, setAllExplore] = useState([]);
@@ -11,19 +14,19 @@ const AllExplore = () => {
         .then(data => setAllExplore(data))
     },[])
     return (
-        <div>
-            <h1 className="my-5">Our Explore Products : {allExplore.length}</h1>
+        <Container>
+            <Typography sx={{ color: 'info.main', fontWeight: 600, m:5 }} variant="h3">Our Explore Products : {allExplore.length}</Typography>
 
-<div className="allexplore-container">
-    {
-        allExplore.map (explore => <Explore
-        key={explore.id}
-        explore={explore}
-        ></Explore>)
-    }
-</div>
+            <Grid container spacing={2}>
+              {
+                 allExplore.map(explore =><Explore
+                 key = {explore.id}
+                 explore= {explore}
+                 ></Explore>) 
+              }
+            </Grid>
             
-        </div>
+        </Container>
     );
 };
 
