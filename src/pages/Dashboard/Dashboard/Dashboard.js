@@ -17,6 +17,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import { Grid } from '@mui/material';
+import OrderReview from '../../OrderReview/OrderReview';
+import Orders from '../Orders/Orders';
 
 const drawerWidth = 200;
 
@@ -83,14 +86,14 @@ const Dashboard = (props) => {
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+        
         <Drawer
           container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true, 
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
@@ -116,7 +119,15 @@ const Dashboard = (props) => {
       >
         <Toolbar />
         <Typography paragraph>
-          content here
+        <Grid container spacing={2}>
+        <Grid item xs={12}>
+         <Orders></Orders>
+        </Grid>
+        {/* <Grid item xs={4}>
+          <h2>heloo </h2>
+        </Grid> */}
+        
+      </Grid>
         </Typography>
         
       </Box>
@@ -125,10 +136,7 @@ const Dashboard = (props) => {
 }
 
 Dashboard.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
+  
   window: PropTypes.func,
 };
 
