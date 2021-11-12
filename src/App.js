@@ -10,6 +10,7 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Products from './pages/Home/Products/Products';
 import AllExplore from './pages/Home/Explore/AllExplore/AllExplore';
+import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
         </Route>
         <PrivateRoute exact path = "/orderreview">
           <OrderReview></OrderReview>
+        </PrivateRoute>
+        <PrivateRoute exact path = "/dashboard">
+          <Dashboard></Dashboard>
         </PrivateRoute>
         <Route exact path = "/login">
           <Login></Login>

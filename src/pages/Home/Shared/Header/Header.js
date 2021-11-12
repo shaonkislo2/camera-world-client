@@ -1,7 +1,8 @@
-import Button from '@restart/ui/esm/Button';
+
+ import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../../hooks/useAuth';
 import './Header.css'
@@ -25,14 +26,25 @@ const Header = () => {
             <div>
               
             </div>
-             {user?.email?
-            <Button  onClick={logOut}
-             variant="light">Logout</Button> :  
-               <Nav.Link className="nav-style" as={Link}to="login">Login</Nav.Link>}
-              
-         <Navbar.Text>
-         Signed in as: <a href="#login">{user?.displayName} </a>
-        </Navbar.Text>  
+             {
+             user?.email?
+           <>
+           <span> <Nav.Link className="nav-style" as={Link}to="dashboard">Dashboard</Nav.Link>
+          </span>
+           <span> <Button  onClick={logOut}
+             variant="light">Logout</Button></span>
+           
+            </>
+            :  
+            <Nav.Link className="nav-style" as={Link}to="login">Login</Nav.Link>
+            }
+
+
+            <Navbar.Text>
+                Signed in as: <a href="#login">{user?.displayName} </a>
+                </Navbar.Text> 
+        
+          
     </Navbar.Collapse>
           
           </Container>
@@ -43,3 +55,13 @@ const Header = () => {
 };
 
 export default Header;
+
+/*
+
+
+
+
+       <NavLink style={{textDecoration: 'none', color: 'white'}} to="/login">
+                <Button color="inherit">Login </Button>
+             </NavLink> 
+*/
