@@ -132,7 +132,7 @@ const Dashboard = (props) => {
         
       </Box>
     </Box>
-  );
+  );  
 }
 
 Dashboard.propTypes = {
