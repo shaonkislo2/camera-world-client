@@ -27,7 +27,6 @@ const useFirebase = () => {
         }).then(() => {
         }).catch((error) => {
         });
-
             history.replace('/');
           })
           .catch((error) => {

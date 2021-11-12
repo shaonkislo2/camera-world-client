@@ -6,6 +6,7 @@ import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import useAuth from '../../../../hooks/useAuth';
 
 const style = {
   position: 'absolute',
@@ -21,6 +22,7 @@ const style = {
 
 const ExploreModal = ({openExplore, handleExploreClose, explore}) => {
     const {name, price} = explore;
+    const {user} = useAuth();
 
     const handleExploreSubmit = e => {
         alert('submitting');
@@ -42,7 +44,7 @@ const ExploreModal = ({openExplore, handleExploreClose, explore}) => {
         BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,
-        }}
+        }}   
       >
         <Fade in={openExplore}>
           <Box sx={style}>
@@ -58,14 +60,14 @@ const ExploreModal = ({openExplore, handleExploreClose, explore}) => {
             <TextField
             sx={{width:'90%', m:1}}
           id="filled-size-small"
-          defaultValue="Your Name"
+          defaultValue={user.displayName}
           variant="filled"
           size="small"
         />
             <TextField
             sx={{width:'90%', m:1}}
           id="filled-size-small"
-          defaultValue="Your Email"
+          defaultValue={user.email}
           variant="filled"
           size="small"
         />
