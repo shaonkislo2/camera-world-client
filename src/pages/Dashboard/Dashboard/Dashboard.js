@@ -120,12 +120,10 @@ const Dashboard = (props) => {
         <Toolbar />
         <Typography paragraph>
         <Grid container spacing={2}>
-        <Grid item xs={12}>
+        <Grid item xs={12} >
          <Orders></Orders>
         </Grid>
-        {/* <Grid item xs={4}>
-          <h2>heloo </h2>
-        </Grid> */}
+         
         
       </Grid>
         </Typography>
