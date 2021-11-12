@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -24,10 +24,27 @@ const ExploreModal = ({openExplore, handleExploreClose, explore}) => {
     const {name, price} = explore;
     const {user} = useAuth();
 
-    const handleExploreSubmit = e => {
-        alert('submitting');
+    const initialInfo = {customerName: user.displayName, email: user.email, phone: ''}
 
-        // collect data
+    const [exploreInfo, setExploreInfo] = useState(initialInfo);
+
+    const handleOnBlur = e =>{
+        const field = e.target.name;
+        const value = e.target.value;
+        const newInfo = {...exploreInfo};
+        newInfo[field] = value;
+        setExploreInfo(newInfo);
+    }
+
+    const handleExploreSubmit = e => {
+    // collect data
+
+    const exploreSubmit = {
+      ...exploreInfo,
+      productName: name, 
+      price,
+    }
+    console.log(exploreSubmit);
         // send to the server
 
         
@@ -61,19 +78,25 @@ const ExploreModal = ({openExplore, handleExploreClose, explore}) => {
             sx={{width:'90%', m:1}}
           id="filled-size-small"
           defaultValue={user.displayName}
+          name="customerName"
+          onBlur={handleOnBlur}
           variant="filled"
           size="small"
         />
             <TextField
             sx={{width:'90%', m:1}}
           id="filled-size-small"
-          defaultValue={user.email}
+          name="email"
+          onBlur={handleOnBlur}
+          defaultValue={user.email}         
           variant="filled"
           size="small"
         />
             <TextField
             sx={{width:'90%', m:1}}
           id="filled-size-small"
+          name="phone"
+          onBlur={handleOnBlur}
           defaultValue="Phone Number"
           variant="filled"
           size="small"
