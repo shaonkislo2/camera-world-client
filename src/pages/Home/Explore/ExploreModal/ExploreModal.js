@@ -39,13 +39,24 @@ const ExploreModal = ({openExplore, handleExploreClose, explore}) => {
     const handleExploreSubmit = e => {
     // collect data
 
-    const exploreSubmit = {
+    const exploreOrder = {
       ...exploreInfo,
       productName: name, 
       price,
     }
-    console.log(exploreSubmit);
-        // send to the server
+    
+      // send to the server
+      fetch('http://localhost:5000/order', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(exploreOrder)
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+      })
 
         
         handleExploreClose();
