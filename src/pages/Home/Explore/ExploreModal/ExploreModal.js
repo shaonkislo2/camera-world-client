@@ -20,8 +20,8 @@ const style = {
   p: 4,
 };
 
-const ExploreModal = ({openExplore, handleExploreClose, explore}) => {
-    const {name, price} = explore;
+const ExploreModal = ({openExplore, handleExploreClose, explore, setOrderSuccess}) => {
+    const {name, price, img} = explore;
     const {user} = useAuth();
 
     const initialInfo = {customerName: user.displayName, email: user.email, phone: ''}
@@ -55,11 +55,14 @@ const ExploreModal = ({openExplore, handleExploreClose, explore}) => {
       })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
+        if(data.insertedId){
+          setOrderSuccess(true);           
+          handleExploreClose();
+        }
       })
 
         
-        handleExploreClose();
+        
         e.preventDefault();
     } 
     return (
@@ -82,6 +85,7 @@ const ExploreModal = ({openExplore, handleExploreClose, explore}) => {
             <Typography id="transition-modal-title" variant="h6" component="h2">
              Price: {price}
             </Typography>
+           
             
            <form onSubmit={handleExploreSubmit}>
            

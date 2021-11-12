@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import ExploreModal from '../ExploreModal/ExploreModal';
 
-const Explore = ({explore}) => {
+const Explore = ({explore, setOrderSuccess}) => {
     const {name, img, price} = explore;
     const [openExplore, setOpenExplore] = React.useState(false);
     const handleExploreOpen = () => setOpenExplore(true);
@@ -32,6 +32,7 @@ const Explore = ({explore}) => {
       explore={explore}
       openExplore={openExplore}
       handleExploreClose={handleExploreClose}
+      setOrderSuccess={setOrderSuccess}
       ></ExploreModal>
 
       </>
