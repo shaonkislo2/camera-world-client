@@ -2,39 +2,45 @@
 [
     {
       "id": 1,
-      "name": "Canon EOS R6 ",
-      "price": "$50",
-      "img": "https://i.gadgets360cdn.com/products/small/canon-eos-r6-240x180-1594366613.jpg"
+      "name": "canon-r5 ",
+      "price": "$1150",
+      "img": "https://i.ibb.co/KFwGGQ4/canon-r5.png",
+      "description": "This camera is an entry-level full-frame camera that goes well beyond the basics in features, with excellent image quality"
     },
     {
       "id": 2,
-      "name": "Canon EOS R5 ",
-      "price": "$60",
-      "img": "https://i.gadgets360cdn.com/products/small/canon-eos-r5-240x180-1594365791.jpg"
+      "name": "nikon-z5",
+      "price": "$1260",
+      "img": "https://i.ibb.co/Tq8GT0k/nikon-z5.png",
+      "description": "This camera is an entry-level full-frame camera that goes well beyond the basics in features, with excellent image quality"
     },
     {
       "id": 3,
-      "name": "EOS 90D",
-      "price": "$70",
-      "img": "https://in.canon/media/image/2019/08/27/12b2d7431a5d4f51bd3184bb8d332bda_19_EOS+90D_BK_FrontSlantDown_18-55ISSTM.png"
+      "name": "nikon-z7",
+      "price": "$1470",
+      "img": "https://i.ibb.co/dGyHHsg/nikon-z7.png",
+      "description": "This camera is an entry-level full-frame camera that goes well beyond the basics in features, with excellent image quality"
     },
     {
       "id": 4,
-      "name": "EOS 850D",
-      "price": "$80",
-      "img": "https://in.canon/media/image/2020/02/11/fff676b601864fd5bdfff7d8ff8fb658_EOS+850D+w+Kit+Lens+Front+Slant.png"
+      "name": "sony-a7riii",
+      "price": "$2280",
+      "img": "https://i.ibb.co/1KfFf0F/sony-a7riii.png",
+      "description": "This camera is an entry-level full-frame camera that goes well beyond the basics in features, with excellent image quality"
     },
     {
       "id": 5,
-      "name": "EOS 6D Mark II",
-      "price": "$85",
-      "img": "https://in.canon/media/migration/shared/live/products/EN/eos6d-mkii-ef-24-105mm-l.png"
+      "name": "sony-a9",
+      "price": "$1385",
+      "img": "https://i.ibb.co/nPrhBcW/sony-a9.png",
+      "description": "This camera is an entry-level full-frame camera that goes well beyond the basics in features, with excellent image quality"
     },
     {
       "id": 6,
-      "name": "EOS 5D Mark IV",
-      "price": "$90",
-      "img": "https://in.canon/media/migration/shared/live/products/EN/eos-5d-mk-iv-ef24-105mm-b1.png"
+      "name": "sony-a9ii",
+      "price": "$1590",
+      "img": "https://i.ibb.co/k06G1nJ/sony-a9ii.png",
+      "description": "This camera is an entry-level full-frame camera that goes well beyond the basics in features, with excellent image quality"
     }
   ]
   */

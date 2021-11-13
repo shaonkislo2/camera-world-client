@@ -11,7 +11,7 @@ const Header = () => {
   const {user, logOut} = useAuth();
     return (
         <>
-        <Navbar bg="success" variant="dark" sticky="top" collapseOnSelect expand="lg" >
+        <Navbar bg="info" variant="dark" sticky="top" collapseOnSelect expand="lg" >
           <Container>
           <Navbar.Brand className="fs-2" href="#home"> <i class="fas fa-camera"></i> Camera World</Navbar.Brand>
           <Navbar.Toggle />
@@ -21,7 +21,6 @@ const Header = () => {
             <Nav.Link className="nav-style" as={HashLink} to="/allexplore">Explore</Nav.Link>
             <Nav.Link className="nav-style" as={HashLink} to="/home#gallery">Gallery</Nav.Link>
             <Nav.Link className="nav-style" as={HashLink} to="/review">Review</Nav.Link>
-            <Nav.Link className="nav-style" as={Link}to="about">About</Nav.Link>
             
             <div>
               

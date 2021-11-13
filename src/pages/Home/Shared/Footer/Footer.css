@@ -1,0 +1,13 @@
+.footer {
+    padding: 50px;
+    background: rgb(34, 34, 34);
+    color: white;
+  }
+  .link-style a{
+    text-decoration: none;
+    color: brown;
+  }
+
+  .link-style :hover{
+    background-color: white;
+  }
