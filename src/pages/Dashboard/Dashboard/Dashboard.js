@@ -151,6 +151,12 @@ const Dashboard = (props) => {
          <MakeAdmin></MakeAdmin>
         </Route>
       </Switch> */}
+      <Grid container spacing={2}>
+        <Grid item xs={12} >
+         <Orders></Orders>
+        </Grid>
+
+      </Grid>
       
         
       </Box>
