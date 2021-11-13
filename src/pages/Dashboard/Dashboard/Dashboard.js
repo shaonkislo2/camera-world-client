@@ -15,11 +15,23 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import { Grid } from '@mui/material';
 
 import Orders from '../Orders/Orders';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch
+} from "react-router-dom";
+import DashboardHome from '../DashboardHome/DashboardHome';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+
+
 
 const drawerWidth = 200;
 
@@ -27,6 +39,8 @@ const Dashboard = (props) => {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
   
+    // let { path, url } = useRouteMatch();
+
     const handleDrawerToggle = () => {
       setMobileOpen(!mobileOpen);
     };
@@ -35,8 +49,12 @@ const Dashboard = (props) => {
       <div>
         <Toolbar />
         <Divider />
-        <Link to="/home"><Button >Home</Button></Link>
+        {/* <Link to="/home"><Button >Home</Button></Link>
         <Link to="/allexplore"><Button >Explore</Button></Link>
+        <Link to={`${url}`}><Button >Dashboard</Button></Link>
+        <Link to={`${url}/makeAdmin`}><Button >Make Admin</Button></Link>
+        <Link to={`${url}/addCustomer`}><Button >Add Customer</Button></Link> */}
+        
         
         <List>
           {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
@@ -77,9 +95,12 @@ const Dashboard = (props) => {
             Dashboard
           </Typography>
           <Typography variant="h6" component="div">
-            
+          <Link to="/allexplore"><Button >Explore</Button></Link>
           </Typography>
-          <Link style={{color: 'white'}} to="/">home</Link>
+          <Typography variant="h6" component="div">
+          <Link to="/makeAdmin"><Button >Make Admin</Button></Link>
+          </Typography>
+          
 
          
         </Toolbar>
@@ -121,15 +142,16 @@ const Dashboard = (props) => {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        <Typography paragraph>
-        <Grid container spacing={2}>
-        <Grid item xs={12} >
-         <Orders></Orders>
-        </Grid>
-         
-        
-      </Grid>
-        </Typography>
+       
+        {/* <Switch>
+        <Route exact path={path}>
+          <DashboardHome></DashboardHome>
+        </Route>
+        <Route path={`${path}/makeAdmin`}>
+         <MakeAdmin></MakeAdmin>
+        </Route>
+      </Switch> */}
+      
         
       </Box>
     </Box>

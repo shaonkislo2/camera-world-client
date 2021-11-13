@@ -11,6 +11,7 @@ import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Products from './pages/Home/Products/Products';
 import AllExplore from './pages/Home/Explore/AllExplore/AllExplore';
 import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
+import MakeAdmin from './pages/Dashboard/MakeAdmin/MakeAdmin';
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
         </PrivateRoute>
         <Route exact path = "/login">
           <Login></Login>
+        </Route>
+        <Route exact path = "/makeAdmin">
+          <MakeAdmin></MakeAdmin>
         </Route>
         <Route exact path = "/register">
           <Register></Register>
