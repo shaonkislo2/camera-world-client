@@ -46,7 +46,7 @@ const ExploreModal = ({openExplore, handleExploreClose, explore, setOrderSuccess
     }
     
       // send to the server
-      fetch('http://localhost:5000/order', {
+      fetch('https://aqueous-peak-41185.herokuapp.com/order', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'
