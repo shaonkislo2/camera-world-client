@@ -2,6 +2,8 @@ import { Alert, Container, Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Explore from '../Explore/Explore';
 import Typography from '@mui/material/Typography';
+import Header from '../../Shared/Header/Header';
+import Footer from '../../Shared/Footer/Footer';
 
 
 
@@ -15,7 +17,10 @@ const AllExplore = () => {
         .then(data => setAllExplore(data))
     },[])
     return (
+        <> 
+        <Header></Header>
         <Container>
+            
             <Typography sx={{ color: 'info.main', fontWeight: 600, m:5 }} variant="h3">Our Explore Products : {allExplore.length}</Typography>
             {orderSuccess && <Alert severity="success">Order Successfully !</Alert> }
 
@@ -30,6 +35,8 @@ const AllExplore = () => {
             </Grid>
             
         </Container>
+        <Footer></Footer>
+        </>
     );
 };
 

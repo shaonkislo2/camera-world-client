@@ -35,7 +35,8 @@ const Dashboard = (props) => {
       <div>
         <Toolbar />
         <Divider />
-        <Link to="/allexplore"><Button variant="light">Explore</Button></Link>
+        <Link to="/home"><Button >Home</Button></Link>
+        <Link to="/allexplore"><Button >Explore</Button></Link>
         
         <List>
           {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
