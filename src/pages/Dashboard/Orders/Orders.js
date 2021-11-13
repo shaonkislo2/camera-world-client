@@ -28,6 +28,7 @@ const Orders = () => {
             <TableCell>Name</TableCell>
             <TableCell >Email</TableCell>
             <TableCell >Phone</TableCell>
+            <TableCell >Products</TableCell>
             
           </TableRow>
         </TableHead>
@@ -42,6 +43,7 @@ const Orders = () => {
               </TableCell>
               <TableCell >{row.email}</TableCell>
               <TableCell >{row.phone}</TableCell>
+              <TableCell >{row.productName}</TableCell>
               
             </TableRow>
           ))}

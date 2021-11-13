@@ -18,7 +18,7 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import { Grid } from '@mui/material';
-import OrderReview from '../../OrderReview/OrderReview';
+
 import Orders from '../Orders/Orders';
 
 const drawerWidth = 200;
@@ -35,6 +35,8 @@ const Dashboard = (props) => {
       <div>
         <Toolbar />
         <Divider />
+        <Link to="/allexplore"><Button variant="light">Explore</Button></Link>
+        
         <List>
           {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
             <ListItem button key={text}>
