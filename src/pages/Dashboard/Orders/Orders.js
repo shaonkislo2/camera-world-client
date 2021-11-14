@@ -23,11 +23,20 @@ const Orders = () => {
     // Delete order
 
     const handleDeleteOrder = id =>{
-        const url = `http://localhost:5000/order/${id}`;
+        const proceed = window.confirm('Are you sure, you want to delete');
+        if(proceed){
+          const url = `http://localhost:5000/order/${id}`;
         fetch(url, {
           method:'DELETE'
         })
-        .then()
+        .then(res => res.json())
+        .then(data => {
+          if(data.deletedCount > 0){           
+            const remainingOrders = orders.filter(order => order._id !== id)
+            setOrders(remainingOrders);
+          }
+        })
+        }
     }
 
     return (
