@@ -35,7 +35,10 @@ const Dashboard = (props) => {
         <Toolbar />
         <Divider />
         
-        <List>
+          <Link to="/makeAdmin"><Button >Make Admin</Button></Link>
+          
+        
+          <List>
           {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>
@@ -79,9 +82,6 @@ const Dashboard = (props) => {
           <Typography variant="h6" component="div">
           <Link to="/allexplore"><Button >Explore</Button></Link>
           </Typography>
-          <Typography variant="h6" component="div">
-          <Link to="/makeAdmin"><Button >Make Admin</Button></Link>
-          </Typography>
           
         </Toolbar>
       </AppBar>
@@ -90,6 +90,8 @@ const Dashboard = (props) => {
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"
       >
+
+
         
         <Drawer
           container={container}
@@ -107,6 +109,7 @@ const Dashboard = (props) => {
           {drawer}
         </Drawer>
         <Drawer
+        
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },

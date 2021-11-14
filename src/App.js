@@ -13,6 +13,7 @@ import Review from './pages/Home/Review/Review/Review';
 import AllReview from './pages/Home/Review/AllReview/AllReview';
 import ExploreModal from './pages/Home/Explore/ExploreModal/ExploreModal';
 import NotFound from './pages/NotFound/NotFound';
+import AboutUs from './pages/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route exact path = "/home">
           <Home></Home>
+        </Route>
+        <Route exact path = "/aboutus">
+          <AboutUs></AboutUs>
         </Route>
         <Route exact path = "/products">
           <Products></Products>
