@@ -5,8 +5,6 @@ import Typography from '@mui/material/Typography';
 import Header from '../../Shared/Header/Header';
 import Footer from '../../Shared/Footer/Footer';
 
-
-
 const AllExplore = () => {
     const [orderSuccess, setOrderSuccess] = useState(false);
     const [allExplore, setAllExplore] = useState([]);

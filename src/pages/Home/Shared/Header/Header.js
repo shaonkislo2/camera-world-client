@@ -55,12 +55,3 @@ const Header = () => {
 
 export default Header;
 
-/*
-
-
-
-
-       <NavLink style={{textDecoration: 'none', color: 'white'}} to="/login">
-                <Button color="inherit">Login </Button>
-             </NavLink> 
-*/

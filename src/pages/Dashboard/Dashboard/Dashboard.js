@@ -15,31 +15,16 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import { Grid } from '@mui/material';
-
 import Orders from '../Orders/Orders';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch
-} from "react-router-dom";
-import DashboardHome from '../DashboardHome/DashboardHome';
-import MakeAdmin from '../MakeAdmin/MakeAdmin';
-
-
 
 const drawerWidth = 200;
 
 const Dashboard = (props) => {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-  
-    // let { path, url } = useRouteMatch();
 
     const handleDrawerToggle = () => {
       setMobileOpen(!mobileOpen);
@@ -49,12 +34,6 @@ const Dashboard = (props) => {
       <div>
         <Toolbar />
         <Divider />
-        {/* <Link to="/home"><Button >Home</Button></Link>
-        <Link to="/allexplore"><Button >Explore</Button></Link>
-        <Link to={`${url}`}><Button >Dashboard</Button></Link>
-        <Link to={`${url}/makeAdmin`}><Button >Make Admin</Button></Link>
-        <Link to={`${url}/addCustomer`}><Button >Add Customer</Button></Link> */}
-        
         
         <List>
           {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
@@ -104,8 +83,6 @@ const Dashboard = (props) => {
           <Link to="/makeAdmin"><Button >Make Admin</Button></Link>
           </Typography>
           
-
-         
         </Toolbar>
       </AppBar>
       <Box
@@ -146,15 +123,8 @@ const Dashboard = (props) => {
       >
         <Toolbar />
        
-        {/* <Switch>
-        <Route exact path={path}>
-          <DashboardHome></DashboardHome>
-        </Route>
-        <Route path={`${path}/makeAdmin`}>
-         <MakeAdmin></MakeAdmin>
-        </Route>
-      </Switch> */}
-      <Grid container spacing={2}>
+      <Grid container >
+
         <Grid item xs={12} >
          <Orders></Orders>
         </Grid>

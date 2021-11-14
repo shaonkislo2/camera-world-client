@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Product.css'
 
 const Product = ({product}) => {
@@ -10,13 +9,9 @@ const Product = ({product}) => {
          <img className="w-100" src={img} alt="" />
          <p>{description}</p>
          <h3 className="px-3 mt-3">{price}</h3>
-         
 
-        
-         <Link >
-         <button className="btn-style">Order {name} </button>
-            </Link>
-        
+        <button className="btn-style">Order </button>
+  
         </div>
     );
 };

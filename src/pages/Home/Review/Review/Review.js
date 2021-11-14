@@ -7,7 +7,6 @@ const Review = () => {
     const {
 		register,
 		handleSubmit,
-		watch,
 		formState: { errors },
 	} = useForm();
 
@@ -25,45 +24,45 @@ const Review = () => {
         <div>
 			<div>
 				<h1 className="mt-5 text-center text-info">Please Review Us</h1>
-				<div className="login-box w-25 m-auto mt-5">
-					<div className="event-box border border d-flex justify-content-center align-items-center">
-						<div className="login-form">
-							<form onSubmit={handleSubmit(onSubmit)}>
-								<input
-									{...register("name")}
-									placeholder="Name"
-									className="p-2 m-2 w-100"
-								/>
-								<br />
-								<input
-									{...register("rating")}
-									// placeholder="Name"
-									placeholder="Rating"
-									type="rating"
-									className="p-2 m-2 w-100"
+		   <div className="login-box w-25 m-auto mt-5">
+				<div className="event-box border border d-flex justify-content-center align-items-center">
+				<div className="login-form">
+					<form onSubmit={handleSubmit(onSubmit)}>
+					<input
+						{...register("name")}
+						placeholder="Name"
+						className="p-2 m-2 w-100"
+						/>
+						<br />
+						<input
+						{...register("rating")}
+						// placeholder="Name"
+						placeholder="Rating"
+						type="rating"
+						className="p-2 m-2 w-100"
 
-								/>
-								<br />
-								<input
-									{...register("description")}
-									placeholder="Description"
-									className="p-2 m-2"
-									className="p-2 m-2 w-100"
-								/>
-								<br />
+						/>
+						<br />
+						<input
+						{...register("description")}
+						placeholder="Description"
+						className="p-2 m-2"
+						className="p-2 m-2 w-100"
+						/>
+						<br />
 
 
-								{errors.exampleRequired && <span>This field is required</span>}
+						{errors.exampleRequired && <span>This field is required</span>}
 
-								<input
-									type="submit"
-									value="Add"
-									className="btn btn-info w-50"
-								/>
-							</form>
+						<input
+							type="submit"
+							value="Add"
+							className="btn btn-info w-50"
+						/>
+						</form>
 						</div>
-					</div>
 				</div>
+			</div>
 			</div>
 		</div>
     );

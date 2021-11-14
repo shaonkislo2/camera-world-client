@@ -12,6 +12,7 @@ import MakeAdmin from './pages/Dashboard/MakeAdmin/MakeAdmin';
 import Review from './pages/Home/Review/Review/Review';
 import AllReview from './pages/Home/Review/AllReview/AllReview';
 import ExploreModal from './pages/Home/Explore/ExploreModal/ExploreModal';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -52,6 +53,9 @@ function App() {
         </Route>
         <Route exact path = "/register">
           <Register></Register>
+        </Route>
+        <Route path = "*">
+          <NotFound></NotFound>
         </Route>
         </Switch>
       </Router>

@@ -38,7 +38,6 @@ const ExploreModal = ({openExplore, handleExploreClose, explore, setOrderSuccess
 
     const handleExploreSubmit = e => {
     // collect data
-
     const exploreOrder = {
       ...exploreInfo,
       productName: name, 
