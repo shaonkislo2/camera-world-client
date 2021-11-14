@@ -1,5 +1,4 @@
-
- import Button from '@restart/ui/esm/Button';
+import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
@@ -37,7 +36,6 @@ const Header = () => {
             :  
             <Nav.Link className="nav-style" as={Link}to="login">Login</Nav.Link>
             }
-
 
             <Navbar.Text>
                 Signed in as: <a href="#login">{user?.displayName} </a>

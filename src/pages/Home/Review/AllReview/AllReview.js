@@ -14,9 +14,9 @@ const AllReview = () => {
 			<h1>Customer Reviews</h1>
 			<div className="review">
 			<div className="row">
-				{review?.map((pd) => (
-				<div className="col-md-4">
-					<div className="service border border p-3 card text-white bg-primary m-2">
+			{review?.map((pd) => (
+		  <div className="col-md-4">
+			<div className="service border border p-3 card text-white bg-primary m-2">
 					 <div className=" services-img ">
 						<img className="w-100" src={pd?.image} alt="" />
 					 </div>
