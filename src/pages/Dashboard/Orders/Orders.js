@@ -12,6 +12,8 @@ import { Button } from '@mui/material';
 const Orders = () => {
     const {user} = useAuth();
     const [orders, setOrders] = useState([]);
+    
+
 
     useEffect(() =>{
         const url = `https://aqueous-peak-41185.herokuapp.com/order?email=${user.email}`
@@ -25,7 +27,7 @@ const Orders = () => {
     const handleDeleteOrder = id =>{
         const proceed = window.confirm('Are you sure, you want to delete');
         if(proceed){
-          const url = `http://localhost:5000/order/${id}`;
+          const url = `https://aqueous-peak-41185.herokuapp.com/order/${id}`;
         fetch(url, {
           method:'DELETE'
         })
@@ -36,6 +38,7 @@ const Orders = () => {
             const remainingOrders = orders.filter(order => order._id !== id)
             setOrders(remainingOrders);
           }
+          
         })
         }
     }
