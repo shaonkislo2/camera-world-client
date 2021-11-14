@@ -19,6 +19,17 @@ const Orders = () => {
         .then(res => res.json())
         .then(data => setOrders(data))
     },[])
+
+    // Delete order
+
+    const handleDeleteOrder = id =>{
+        const url = `http://localhost:5000/order/${id}`;
+        fetch(url, {
+          method:'DELETE'
+        })
+        .then()
+    }
+
     return (
         <div>
             <h2>Orders : {orders.length} </h2>
@@ -46,7 +57,7 @@ const Orders = () => {
               <TableCell >{row.email}</TableCell>
               <TableCell >{row.phone}</TableCell>
               <TableCell >{row.productName}</TableCell>
-              <Button variant="contained">Delete</Button>
+              <Button onClick={() =>handleDeleteOrder (row?._id)} variant="contained">Delete</Button>
               
             </TableRow>
           ))}
