@@ -21,7 +21,7 @@ const style = {
 };
 
 const ExploreModal = ({openExplore, handleExploreClose, explore, setOrderSuccess}) => {
-    const {name, price, img} = explore;
+    const {name, price} = explore;
     const {user} = useAuth();
 
     const initialInfo = {customerName: user.displayName, email: user.email, phone: ''}
@@ -60,9 +60,7 @@ const ExploreModal = ({openExplore, handleExploreClose, explore, setOrderSuccess
           handleExploreClose();
         }
       })
-
-        
-        
+     
         e.preventDefault();
     } 
     return (
@@ -85,8 +83,7 @@ const ExploreModal = ({openExplore, handleExploreClose, explore, setOrderSuccess
             <Typography id="transition-modal-title" variant="h6" component="h2">
              Price: {price}
             </Typography>
-           
-            
+   
            <form onSubmit={handleExploreSubmit}>
            
             <TextField

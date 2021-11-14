@@ -13,7 +13,7 @@ const Product = ({product}) => {
          
 
         
-         <Link to="/orderreview">
+         <Link >
          <button className="btn-style">Order {name} </button>
             </Link>
         

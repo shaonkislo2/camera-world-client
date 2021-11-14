@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Button } from '@mui/material';
 
 const Orders = () => {
     const {user} = useAuth();
@@ -29,6 +30,7 @@ const Orders = () => {
             <TableCell >Email</TableCell>
             <TableCell >Phone</TableCell>
             <TableCell >Products</TableCell>
+
             
           </TableRow>
         </TableHead>
@@ -44,6 +46,7 @@ const Orders = () => {
               <TableCell >{row.email}</TableCell>
               <TableCell >{row.phone}</TableCell>
               <TableCell >{row.productName}</TableCell>
+              <Button variant="contained">Delete</Button>
               
             </TableRow>
           ))}

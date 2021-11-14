@@ -95,6 +95,9 @@ const Dashboard = (props) => {
             Dashboard
           </Typography>
           <Typography variant="h6" component="div">
+          <Link to="/home"><Button >Home</Button></Link>
+          </Typography>
+          <Typography variant="h6" component="div">
           <Link to="/allexplore"><Button >Explore</Button></Link>
           </Typography>
           <Typography variant="h6" component="div">
